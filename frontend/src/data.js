@@ -38,7 +38,7 @@ const data = {
         },
         {
             name: 'Adidas Fit Pant',
-            slug: 'adidas-fit-pantt',
+            slug: 'adidas-fit-pant',
             category:'Pants',
             image: '/images/p4.jpg',
             price: 65,
