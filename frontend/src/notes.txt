@@ -1,0 +1,17 @@
+App.js
+link
+import { LinkContainer } from 'react-router-bootstrap';
+##Link squigly and greyed out
+#'react-router-bootstrap
+#Could not find declaration file for module 'react-router-bootstrap'.
+
+HomeScreen.js
+import { useEffect, useReducer, useState } from 'react';
+#useState squigly and greyed out
+
+import { useEffect, useReducer, useState } from 'react';
+
+
+server.js
+import express from 'express';
+#Could not find declaration file for module 'express'.
