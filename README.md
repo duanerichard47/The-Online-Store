@@ -86,3 +86,73 @@
    5. seed sample product
       have to change to const product = await Product.findOne({ slug: req.params.slug }); in productRoutes.js line 12
       have to chang to await Product.remove({}); in seedRoutes.js line 8
+21. Seed Sample Users
+   1. create user model
+   2. seed sample users
+   3. create user routes
+   await Product.deleteMany({}); instead of await Product.remove({});
+22. Create Signin Backend API
+   1. create sigin api
+   2. npm install jsonwebtoken
+   3. define generateToken  
+   set token for 30 days
+   can add ARC api as a google extension similar to PostMan
+23. Complete Signin Screen
+   1. handle submit action
+   2. save token name in header
+   3. show user name in header
+     npm install --force react-toastify have to add the --force
+24. Create Shipping Screen
+   1. create form inputs
+   2. handle save shipping address
+   3. add checkout wizard bar
+25. Create Sign Up Screen
+   1. create input forms
+   2. handle submit
+   3. create backend api
+26. Implement Select Payment Method Screen
+   1. create input forms
+   2. handle submit
+27. Create Place Order Screen
+   1. show cart items, payment and address
+   2. calculate order summary
+28. Implement Place Order Action
+   1. handle place order action
+   2. create order create api
+29. Create Order Screen
+   1. create backend api for order/:id
+   2. fetch order api in frontend
+   3. show order information in 2 cloumns
+30. Pay Order By PayPal
+    1. generate paypal client id
+    2. create api to return client id
+    3. install react-paypal-js
+    4. use PayPalScriptProvider in index.js
+    5. use usePayPalScriptReducer in Order Screen
+    6. implement loadPaypalScript function
+    7. render paypal button
+    8. implement onApprove payment function
+    9. create pay order api in backend
+https://developer.paypal.com/home/
+https://developer.paypal.com/dashboard/applications/sandbox
+https://developer.paypal.com/dashboard/accounts
+31. Display Order History
+    1. create order screen
+    2. create order history api
+    3. use api in the frontend
+32. Create Profile Screen
+    1. get user info from context
+    2. show user information
+    3. create user update api
+    4. update user info
+    gliche sign out update user
+33. Publish to Heroku
+    1. create and config noge project
+    2. serve build folder in frontend folder
+    3. Create heroku account
+    4. connect it to github
+    5. Create mongodb atlas database
+    6. Set database connection in heroku env variables
+    7. Commit and push
+    npm init                    in root folder
+    $ npm --force run build             in root folder
