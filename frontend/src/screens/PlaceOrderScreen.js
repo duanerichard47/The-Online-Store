@@ -26,7 +26,6 @@ const reducer = (state, action) => {
   }
 };
 
-
 export default function PlaceOrderScreen() {
   const navigate = useNavigate();
 
@@ -47,33 +46,33 @@ export default function PlaceOrderScreen() {
 
   const placeOrderHandler = async () => {
     try {
-        dispatch({ type: 'CREATE_REQUEST' });
-  
-        const { data } = await Axios.post(
-          '/api/orders',
-          {
-            orderItems: cart.cartItems,
-            shippingAddress: cart.shippingAddress,
-            paymentMethod: cart.paymentMethod,
-            itemsPrice: cart.itemsPrice,
-            shippingPrice: cart.shippingPrice,
-            taxPrice: cart.taxPrice,
-            totalPrice: cart.totalPrice,
+      dispatch({ type: 'CREATE_REQUEST' });
+
+      const { data } = await Axios.post(
+        '/api/orders',
+        {
+          orderItems: cart.cartItems,
+          shippingAddress: cart.shippingAddress,
+          paymentMethod: cart.paymentMethod,
+          itemsPrice: cart.itemsPrice,
+          shippingPrice: cart.shippingPrice,
+          taxPrice: cart.taxPrice,
+          totalPrice: cart.totalPrice,
+        },
+        {
+          headers: {
+            authorization: `Bearer ${userInfo.token}`,
           },
-          {
-            headers: {
-              authorization: `Bearer ${userInfo.token}`,
-            },
-          }
-        );
-        ctxDispatch({ type: 'CART_CLEAR' });
-        dispatch({ type: 'CREATE_SUCCESS' });
-        localStorage.removeItem('cartItems');
-        navigate(`/order/${data.order._id}`);
-      } catch (err) {
-        dispatch({ type: 'CREATE_FAIL' });
-        toast.error(getError(err));
-      }
+        }
+      );
+      ctxDispatch({ type: 'CART_CLEAR' });
+      dispatch({ type: 'CREATE_SUCCESS' });
+      localStorage.removeItem('cartItems');
+      navigate(`/order/${data.order._id}`);
+    } catch (err) {
+      dispatch({ type: 'CREATE_FAIL' });
+      toast.error(getError(err));
+    }
   };
 
   useEffect(() => {
@@ -81,10 +80,10 @@ export default function PlaceOrderScreen() {
       navigate('/payment');
     }
   }, [cart, navigate]);
-    
+
   return (
     <div>
-         <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
+      <CheckoutSteps step1 step2 step3 step4></CheckoutSteps>
       <Helmet>
         <title>Preview Order</title>
       </Helmet>
@@ -184,12 +183,13 @@ export default function PlaceOrderScreen() {
                       Place Order
                     </Button>
                   </div>
+                  {loading && <LoadingBox></LoadingBox>}
                 </ListGroup.Item>
               </ListGroup>
             </Card.Body>
           </Card>
         </Col>
-      </Row>   
+      </Row>
     </div>
   );
 }

@@ -78,6 +78,7 @@
    2. install local mongodb database https://www.mongodb.com/docs/manual/administration/install-community/
    3. npm install mongoose
    4. connect to mongodb database
+   local compass connection mongodb://127.0.0.1/
 20. Seed Sample Data
    1. create Product model
    2. create User Model
@@ -156,3 +157,42 @@ https://developer.paypal.com/dashboard/accounts
     7. Commit and push
     npm init                    in root folder
     $ npm --force run build             in root folder
+    Render.com
+34. Add Sidebar and Search Box
+    1. add sidebar
+    2. add search box
+     app.js line 129 this code to={/search?category=${category}} change to this code => to={/search/category=${category}} 
+35. Create Search Screen
+    1. show filters
+    2. create api for searching products
+    3. display results
+
+    37. Create Dashboard Screen
+    1. create dashboard ui
+    2. implement backend api
+    3. connect ui to backend
+    frontend: npm install --save react-google-charts --force
+
+    42. Upload Product Image
+    1. create cloudinary account
+    2. use the api key in env file
+    3. handle upload file
+    4. implement backend api to upload
+    cloudinary  need to ad info in .env file
+    backend: npm i cloudinary
+    backend: npm i streamifier
+    backend: npm i multer
+
+
+    50. Choose Address On Google Map
+    1. create google map credentials
+    2. update .env file with Google Api Key
+    3. create api to send google api to frontend
+    4. create map screen
+    5. fetch google api
+    6. getUserLocation
+    7. install @react-google-maps/api
+    8. use it in shipping screen
+    9. apply map to the checkout screen
+    add google api key to env. file
+    frontend: npm i @react-google-maps/api --force

@@ -27,7 +27,8 @@ function Product(props) {
       payload: { ...item, quantity },
     });
   };
- return (
+
+  return (
     <Card>
       <Link to={`/product/${product.slug}`}>
         <img src={product.image} className="card-img-top" alt={product.name} />

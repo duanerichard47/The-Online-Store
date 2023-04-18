@@ -15,10 +15,8 @@ export default function SigninScreen() {
   const redirectInUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectInUrl ? redirectInUrl : '/';
 
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { userInfo } = state;
@@ -72,6 +70,9 @@ export default function SigninScreen() {
         <div className="mb-3">
           New customer?{' '}
           <Link to={`/signup?redirect=${redirect}`}>Create your account</Link>
+        </div>
+        <div className="mb-3">
+          Forget Password? <Link to={`/forget-password`}>Reset Password</Link>
         </div>
       </Form>
     </Container>
