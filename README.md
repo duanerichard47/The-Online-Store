@@ -168,14 +168,32 @@ https://developer.paypal.com/dashboard/accounts
     1. show filters
     2. create api for searching products
     3. display results
+36. Create Admin Menu
+    1. define protected route component
+    2. define admin route component
+    3. add menu for admin in header
 
     37. Create Dashboard Screen
     1. create dashboard ui
     2. implement backend api
     3. connect ui to backend
-    frontend: npm install --save react-google-charts --force
-
-    42. Upload Product Image
+    frontend: npm install --save react-google-charts (not compatible use-reducer-logger. try uninstall and adding --legacy-peer-deps to end of use-reducer-logger when reinstall)
+38. Manage Products
+    1. create products list ui
+    2. implement backend api
+    3. fetch data
+39. Create Product
+    1. create products button
+    2. implement backend api
+    3. handle on click  
+40. Create Edit Product
+    1. create edit button
+    2. create edit product ui
+    3. dispaly product info in the input boxes
+41. Implement Update Product
+    1. create edit product backend api
+    2. handle update click
+42. Upload Product Image
     1. create cloudinary account
     2. use the api key in env file
     3. handle upload file
@@ -184,9 +202,38 @@ https://developer.paypal.com/dashboard/accounts
     backend: npm i cloudinary
     backend: npm i streamifier
     backend: npm i multer
+43. Delete Product
+    1. show delete button
+    2. implement backend api
+    3. handle on click
+44. List Orders
+    1. create order list screen
+    2. implement backen api
+    3. fetch and display orders
+45. Deliver Order
+    1. add deliver button
+    2. handle click action
+    3. implement backen api for deliver
 
-
-    50. Choose Address On Google Map
+46. Delete Order
+    1. add delete button
+    2. handle click action
+    3. implement backen api for delete
+47. List Users
+    1. create user list screen
+    2. implement backen api
+    3. fetch and display users
+48. Edit User
+    1. create edit button
+    2. create edit product ui
+    3. dispaly product info in the input boxes
+    4. implement backend api
+    5. handle edit click
+49. Delete User
+    1. add delete button
+    2. handle click action
+    3. implement backen api for delete
+50. Choose Address On Google Map
     1. create google map credentials
     2. update .env file with Google Api Key
     3. create api to send google api to frontend
@@ -197,10 +244,23 @@ https://developer.paypal.com/dashboard/accounts
     8. use it in shipping screen
     9. apply map to the checkout screen
     add google api key to env. file
-    frontend: npm i @react-google-maps/api --force
-
-
-    54. Upgrade To React 18
+    frontend: npm i @react-google-maps/api (not compatible use-reducer-logger. try uninstall and adding --legacy-peer-deps to end of use-reducer-logger when reinstall)
+51. Email order receipt by mailgun
+    1. create mailgun account
+    2. add and verify your domain to mailgun
+    3. install mailgun-js
+    4. set api key in env file
+    5. change pay order in orderRouter
+    6. send email order receipt
+52. Review Orders
+    1. create submit review form
+    2. handle submit
+    3. implement backend api for review
+53. Upload multiple Images
+    1. add images to product model
+    2. get images in edit screen
+    3. show images in product screen
+54. Upgrade To React 8
     1. install node-check-updates
     2. ncu -u
     3. remove package-lock.json
@@ -212,6 +272,6 @@ https://developer.paypal.com/dashboard/accounts
     frontend: ncu
     frontend: ncu -u
     delete matching package-lock-json
-    frontend: npm install
+    frontend: npm install (not compatible use-reducer-logger. try uninstall and adding --legacy-peer-deps to end of use-reducer-logger when reinstall)
     backend: npm install
  get rid of react-dom.development.js:86 Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more:
