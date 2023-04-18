@@ -85,12 +85,14 @@
    3. create seed route
    4. use route in server.js
    5. seed sample product
+   localhost:4000/api/seed
       have to change to const product = await Product.findOne({ slug: req.params.slug }); in productRoutes.js line 12
       have to chang to await Product.remove({}); in seedRoutes.js line 8
 21. Seed Sample Users
    1. create user model
    2. seed sample users
    3. create user routes
+   localhost:4000/api/seed
    await Product.deleteMany({}); instead of await Product.remove({});
 22. Create Signin Backend API
    1. create sigin api
@@ -196,3 +198,20 @@ https://developer.paypal.com/dashboard/accounts
     9. apply map to the checkout screen
     add google api key to env. file
     frontend: npm i @react-google-maps/api --force
+
+
+    54. Upgrade To React 18
+    1. install node-check-updates
+    2. ncu -u
+    3. remove package-lock.json
+    4. npm install
+    5. replace render with createRoot
+    6. fix LinkContainer error
+
+    frontend: npm i npm-check-updates -g
+    frontend: ncu
+    frontend: ncu -u
+    delete matching package-lock-json
+    frontend: npm install
+    backend: npm install
+ get rid of react-dom.development.js:86 Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more:
