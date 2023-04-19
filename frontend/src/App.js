@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes, NavLink } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import HomeScreen from './screens/HomeScreen';
@@ -36,6 +36,10 @@ import UserEditScreen from './screens/UserEditScreen';
 import MapScreen from './screens/MapScreen';
 import ForgetPasswordScreen from './screens/ForgetPasswordScreen';
 import ResetPasswordScreen from './screens/ResetPasswordScreen';
+import ReturnsPage from './pages/ReturnsPage';
+import FeaturedPage from './pages/FeaturedPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -87,7 +91,7 @@ function App() {
               </Button>
 
               <LinkContainer to="/">
-                <Navbar.Brand>amazona</Navbar.Brand>
+                <Navbar.Brand>The Online Store</Navbar.Brand>
               </LinkContainer>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
@@ -273,9 +277,27 @@ function App() {
               ></Route>
 
               <Route path="/" element={<HomeScreen />} />
+ 
+              <Route exact path="/returnsPage" element={<ReturnsPage/>}>
+              </Route> 
+
+              <Route exact path="/featuredItemsPage" element={<FeaturedPage />}></Route>
+
+              <Route exact path="/aboutPage" element={<AboutPage />}>
+              </Route>
+
+              <Route exact path="/contactPage" element={<ContactPage />}>
+              </Route>
+
             </Routes>
           </Container>
         </main>
+        <div className="navigation">
+        <NavLink to="/returnsPage">Return Policy</NavLink>
+        <NavLink to="/featuredItemsPage">Hot Items</NavLink>
+        <NavLink to="/aboutPage">About</NavLink>
+        <NavLink to="/contactPage">Contact Us</NavLink>
+        </div>
         <footer>
           <div className="text-center">All rights reserved</div>
         </footer>
