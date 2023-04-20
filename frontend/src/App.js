@@ -304,7 +304,7 @@ function App() {
         </main>
         <div className="navigation">
           <nav>
-            <ul>
+            <ul className="list1">
               <li>
                 <NavLink to="/returnsPage" style={{ display: 'inline-block' }}>
                   Return Policy
@@ -320,7 +320,7 @@ function App() {
               </li>
               <li>
                 <NavLink to="/aboutPage" style={{ display: 'block' }}>
-                  About ttttttt
+                  About 
                 </NavLink>
               </li>
               <li>

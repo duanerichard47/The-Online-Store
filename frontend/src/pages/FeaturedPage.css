@@ -1,1 +1,10 @@
-.pages { color:red;}
+.change-text-color:hover{ color:red; transition-duration: 1s;}
+
+.transition{ width: 200px; height: 100px;
+    color:red; background: black; transition-duration: 5s; margin:15px; transition: all 3s linear;}
+.transition:hover{transform:translateX(1500px);}
+
+.transform:hover{background-color: white;}
+.transform{ width: 200px; height: 100px;
+    color:red; background: black; margin:15px; transition-property: background, border-radius; transition-duration: 4s, 2s; }
+.transform:hover{border-radius: 100%;}
