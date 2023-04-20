@@ -16,7 +16,7 @@ function FeaturedPage() {
       <Card.Body className='change-text-color'>
         <Card.Title>Hot Sale</Card.Title>
         <Card.Text>
-        Lorem ipsum dolor sit amet. Ut unde facilis id internos sint ea quae aspernatur et praesentium accusamus est praesentYeedi mop Station pro Robot Vacuum and Mop, Self-Cleaning 3 in 1, Robotic Vacuum with Dual Power Spin Mopping, 3000Pa Suction, Smart Mapping, Carpet Detection, Pet-Friendly Design with 750ml Dustbin
+        Station pro Robot Vacuum and Mop, Self-Cleaning 3 in 1, Robotic Vacuum with Dual Power Spin Mopping, 3000Pa Suction, Smart Mapping, Carpet Detection, Pet-Friendly Design with 750ml Dustbin
         </Card.Text>
       </Card.Body >
       <ListGroup className="list-group-flush, ">
