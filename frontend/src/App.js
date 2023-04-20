@@ -277,26 +277,59 @@ function App() {
               ></Route>
 
               <Route path="/" element={<HomeScreen />} />
- 
-              <Route exact path="/returnsPage" element={<ReturnsPage/>}>
-              </Route> 
 
-              <Route exact path="/featuredItemsPage" element={<FeaturedPage />}></Route>
+              <Route
+                exact
+                path="/returnsPage"
+                element={<ReturnsPage />}
+              ></Route>
 
-              <Route exact path="/aboutPage" element={<AboutPage />}>
-              </Route>
+              <Route
+                exact
+                path="/featuredItemsPage"
+                element={<FeaturedPage />}
+              ></Route>
+              
 
-              <Route exact path="/contactPage" element={<ContactPage />}>
-              </Route>
+              <Route exact path="/aboutPage" element={<AboutPage />}></Route>
 
+              <Route
+                exact
+                path="/contactPage"
+                element={<ContactPage />}
+              ></Route>
+              
             </Routes>
           </Container>
         </main>
         <div className="navigation">
-        <NavLink to="/returnsPage">Return Policy</NavLink>
-        <NavLink to="/featuredItemsPage">Hot Items</NavLink>
-        <NavLink to="/aboutPage">About</NavLink>
-        <NavLink to="/contactPage">Contact Us</NavLink>
+          <nav>
+            <ul>
+              <li>
+                <NavLink to="/returnsPage" style={{ display: 'inline-block' }}>
+                  Return Policy
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/featuredItemsPage"
+                  style={{ display: 'inline-block' }}
+                >
+                  Hot Items
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/aboutPage" style={{ display: 'block' }}>
+                  About ttttttt
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contactPage" style={{ display: 'block' }}>
+                  Contact Us
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
         <footer>
           <div className="text-center">All rights reserved</div>
